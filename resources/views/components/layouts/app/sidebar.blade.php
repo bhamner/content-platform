@@ -13,6 +13,9 @@
 
             <flux:navlist variant="outline">
                 <flux:navlist.group heading="Platform" class="grid">
+                    <flux:navlist.item icon="layout-grid" :href="route('home')" :current="request()->routeIs('home')" wire:navigate>Browse</flux:navlist.item>
+                    <flux:navlist.item icon="book-open-text" :href="route('library.index')" :current="request()->routeIs('library.*')" wire:navigate>Library</flux:navlist.item>
+                    <flux:navlist.item icon="folder-git-2" :href="route('creator.products.index')" :current="request()->routeIs('creator.*')" wire:navigate>Creator</flux:navlist.item>
                     <flux:navlist.item icon="home" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>Dashboard</flux:navlist.item>
                 </flux:navlist.group>
             </flux:navlist>
